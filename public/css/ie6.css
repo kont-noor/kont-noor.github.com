@@ -1,0 +1,2 @@
+/* ie6 */
+body{ width:expression(document.documentElement.clientWidth < 802 ? "802px" : "auto");}

@@ -1,12 +1,33 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>KontNoor</title>
-  <%= csrf_meta_tags %>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<title>Kont Noor's main page</title>
+	<%= stylesheet_link_tag :all %>
+    <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
+	<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="/css/ie6.css" media="screen"/><![endif]-->
 </head>
 <body>
-
-<%= yield %>
-
+	<div id="main">
+		<div id="center">
+			<div class="content">
+				<%= yield %>
+			</div>
+			<div class="sidebar">
+				<ul>
+				    <% @pages.each do |page| %>
+                    <li><%= link_to page.title, page %></li>
+                    <% end %>
+					<li><a class="active" href="#">Lorem ipsum</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="header">
+			<strong class="logo"><img src="/images/logo.gif" alt="Чого вилупився?" /></strong>
+			<em class="title">Офіційний сайт Конта Ноорського,<br />сусіда Олексія Мангупського</em>
+		</div>
+	</div>
 </body>
 </html>
