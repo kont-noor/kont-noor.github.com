@@ -14,7 +14,7 @@ class PagesController < ApplicationController
   # GET /pages/1.json
   def show
   @pages = Page.all
-    @page = Page.find(params[:id])
+    @page = Page.find(:first, :conditions => "url = '#{params[:id]}'")
 
     respond_to do |format|
       format.html # show.html.erb

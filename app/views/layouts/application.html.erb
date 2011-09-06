@@ -17,7 +17,7 @@
 			<div class="sidebar">
 				<ul>
 				    <% @pages.each do |page| %>
-                    <li><%= link_to page.title, page %></li>
+                    <li><%= raw menu_link_to page.title, page.url %></li>
                     <% end %>
 					<li><a class="active" href="#">Lorem ipsum</a></li>
 				</ul>
