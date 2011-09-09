@@ -17,14 +17,13 @@
 			<div class="sidebar">
 				<ul>
 				    <% @pages.each do |page| %>
-                    <li><%= raw menu_link_to page.title, page.url %></li>
+                    <li><%= link_to page.title, '/'+page.url %></li>
                     <% end %>
-					<li><a class="active" href="#">Lorem ipsum</a></li>
 				</ul>
 			</div>
 		</div>
 		<div id="header">
-			<strong class="logo"><img src="/images/logo.gif" alt="Чого вилупився?" /></strong>
+			<strong class="logo"><%= image_tag "logo.gif", {:alt => "Чого вилупився?"} %></strong>
 			<em class="title">Офіційний сайт Конта Ноорського,<br />сусіда Олексія Мангупського</em>
 		</div>
 	</div>

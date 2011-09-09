@@ -15,6 +15,7 @@ class PagesController < ApplicationController
   def show
   @pages = Page.all
     @page = Page.find(:first, :conditions => "url = '#{params[:id]}'")
+    #@page = Page.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

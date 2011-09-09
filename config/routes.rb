@@ -1,7 +1,9 @@
 KontNoor::Application.routes.draw do
-  resources :pages
+  resources :pages do
+    match ':controller/:action/:url'
+  end
   match '/:id' => 'pages#show'
-  
+
   get "home/index"
 
   # The priority is based upon order of creation:
