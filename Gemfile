@@ -7,12 +7,11 @@ gem 'rails', '3.1.0'
 
 group :production do
   gem 'pg'
+  gem "thin"
 end
 group :development, :test do
   gem 'sqlite3'
 end
-
-gem "thin"
 
 gem "heroku"
 

@@ -1,14 +1,6 @@
 class HomeController < ApplicationController
   def index
-  	@pages = Page.all
-     @page = Page.find(:first, :conditions => "url = 'home'")
-
-    respond_to do |format|
-      format.html # show.html.erb
-
-      format.json { render :json => @page }
-
-    end
+    @page = Page.find_or_create_by_url('home')
+    @pages = Page.all
   end
-
 end

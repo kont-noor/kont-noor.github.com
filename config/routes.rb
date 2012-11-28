@@ -1,7 +1,5 @@
 KontNoor::Application.routes.draw do
-  resources :pages do
-    match ':controller/:action/:url'
-  end
+  resources :pages
   match '/:id' => 'pages#show'
 
   get "home/index"
